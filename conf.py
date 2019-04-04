@@ -51,7 +51,6 @@ def db_create():
 
 def update_account():
     c.connection.cursor()
-    #search_account = str.lower(input("Podaj konto, które chcesz zmienić: "))
     search_account = input(str.lower('Podaj jakie konto chcesz edytować? '))
     print(search_account)
     search = c.execute("SELECT * FROM accounts WHERE account_name=?", (search_account,)) ##UWAGA NA PRZECINEK!
